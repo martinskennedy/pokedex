@@ -1,0 +1,6 @@
+/*função que converte tudo que é pixel para rem*/
+
+@function rem-calc($size){
+    $value: $size / 16;
+    @return #{value}rem;
+}
