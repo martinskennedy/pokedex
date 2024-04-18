@@ -12,6 +12,7 @@ export class PokeApiService {
 
   constructor(private http: HttpClient) {}
 
+  // Navegar pela Url (verificar com console.log)
   get apiListAllPokemons(): Observable<any> { // Observable e opcional pois já vem enbutido
     return this.http.get<any>(this.url).pipe(
       tap((res) => res),
