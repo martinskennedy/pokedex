@@ -18,7 +18,7 @@ export class PokeApiService {
       tap((res) => res),
       tap((res) => {
         res.results.map((resPokemons: any) => { // esse map e do javascript e não do rxjs
-          this.apiGetPokemons(resPokemons.url).subscribe(
+          this.apiGetPokemon(resPokemons.url).subscribe(
             res => resPokemons.status = res
           );
         });
@@ -26,7 +26,7 @@ export class PokeApiService {
     );
   }
 
-  public apiGetPokemons(url: string): Observable<any> { //Observable opcional
+  public apiGetPokemon(url: string): Observable<any> { //Observable opcional
     return this.http.get<any>(url).pipe(
       map( // esse map e do rxjs
         (res) => res
